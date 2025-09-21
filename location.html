@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style text="type/css">
+        *{
+            margin:0px;
+            padding:0px;
+            font-family: sans-serif;
+        }
+        body{
+            background-image:linear-gradient(black,#106656);
+            height:1117px;
+            width:1500px;
+            background-repeat: no-repeat;
+        }
+        .container{
+            height:1112px;
+            width:1500px;
+            padding-left: 2%;
+            padding-right: 5%;
+            box-sizing: border-box;
+            position:relative;
+            background-color:rgb(19, 19, 19);
+            margin-left: 10px;
+            margin-top:20px;
+            border: 2px solid #106656;
+            box-shadow:0px 0px 10px #106656;
+        }
+        .navbar{
+            width: 100%;
+            height:80px;
+            align-items: center;        
+            display:flex;
+            padding-top:20px;
+        }
+        nav{
+            width:600px;
+            margin-left:600px;
+        }
+        nav ul li{
+            display: inline-block;
+            list-style: none;    
+            margin-left:40px; 
+        }
+        nav ul li a{
+            text-decoration: none;
+            color:white;
+            font-size:18px; 
+            font-weight: 80px;
+            cursor: pointer;
+            width:max-content;
+            margin:100px auto;
+            position: relative;
+        }
+        nav ul li a::after{
+            content:"";
+            position: absolute;
+            bottom:-5px;
+            height:2px;
+            width:100%;
+            background-color:white;
+            left:0;
+            transition:1s ease-in-out;
+            transform: scaleX(0);
+            background-color:white;
+        }
+        nav ul li a:hover::after{
+            font-size:18px;
+            transform: scaleX(1);
+        }
+        nav ul li a:hover{
+            color: #106656;
+            text-decoration: none;
+        }
+        .navbar h1{
+            height: 40px;
+            width: 200px;
+            border-radius:80px;
+            font-size:20px; 
+            width: 160px;
+            cursor: pointer;
+            color: white;
+            margin-left:50px;
+        }
+        .glyphicon-map-marker{
+            font-size:30px;
+            padding-left:40px;
+            padding-top:20px;
+        }
+        .glyphicon-earphone{
+            font-size:30px;
+            padding-left:40px;
+            padding-top:20px;
+        }
+        .glyphicon-envelope{
+            font-size:30px; 
+            padding-top:20px;
+            padding-left:40px;
+        }
+        #main{
+            display:flex;
+            margin-top:20PX;
+        }
+        #icon1{
+            border:1px solid white;
+            display: flex;
+            color:white;
+            height:80px;
+            margin-left:60px;
+            background-color: white;
+            color: black;
+            width:400px;
+        }
+        #icon2{
+            border:1px solid white;
+            display: flex;
+            color:white;
+            height:80px;
+            margin-left:60px;
+            background-color: white;
+            color: black;
+            width:400px;
+        }
+        #icon3{
+            border:1px solid white;
+            display: flex;
+            color:white;
+            height:80px;
+            margin-left:60px;
+            background-color: white;
+            color: black;
+            width:400px;
+        }
+        #icon1:hover{
+            background-color: #106656;
+            color: white;
+        }
+        #icon2:hover{
+            background-color: #106656;
+            color: white;
+        }
+        #icon3:hover{
+            background-color: #106656;
+            color: white;
+        }
+        p{
+            padding-left:40px;
+            font-size:15px;
+
+        }
+        b{
+            font-size:15px;
+            padding-left:40px;
+
+        }
+        #a1{
+            padding-top:8px;
+            justify-content: space-between;
+        }
+        
+        #a2{
+            padding-top:15px;
+            justify-content: space-between;
+        }
+        
+        #a3{
+            padding-top:15px;
+            justify-content: space-between;
+        }
+        #content{
+           border: 1px solid white;
+           background-color: black;
+           height:500px;
+           width:680px;
+           margin-left:20px;
+           box-shadow:0px 0px 10px #106656;
+           margin-top:30px;
+        }
+        input{
+           font-size:15px;
+           margin-left:40px;
+           height:30px;
+           width:270px;
+           border: none;
+           outline: none;
+           margin-top:50px;
+           margin-bottom: 10px;
+           background: none;
+           border-bottom:2px solid white;
+           color: white;
+        }
+        input::placeholder{
+            color: white;
+        }
+        input:focus{
+            border-bottom:2px solid transparent;
+        }
+        #any{
+            height:600px;
+            width:600px;
+            margin-left: 80px;
+        }
+        h4{
+            font-size: 30px;
+            color: white;
+            margin-left:40px;
+            margin-top:30px;
+            cursor: pointer;
+        }
+        h4:hover{
+            color: #106656;
+        }
+        textarea{
+            padding-left:10px;
+            font-weight: 300;
+            font-size: 15px;
+            background: none; 
+            border: none;
+            border-bottom:2px solid white;
+            outline: none;
+            width:550px;
+            margin-left:50px;
+            height:80px;
+        }
+        button{
+            height:40px;
+            width:150px;
+            border-radius:30px;
+            margin-left:240px;
+            margin-top:25px;
+            font-size:18px;
+            background-color: #106656;
+            border: 1px solid #106656;
+            box-shadow:0px 0px 10px #106656;
+            color: white;
+        }
+        button:hover{
+            background-color:black;
+            box-shadow:0px 0px 20px #106656;
+        }
+        h6{
+            font-size:20px;
+            color: white;
+            margin-left: 30px;
+            margin-top:40px;
+            font-weight: 300;
+            width:400px;
+        }
+        #flex{
+            display: flex;
+        }
+        h2{
+            font-size:50px;
+            margin-left:600px;
+            color:white;
+            margin-top:25px;
+        }
+        h3{
+            font-size:50px;
+            color:#106656;
+            margin-top:25px;
+            margin-left:20PX;
+        }
+        #project{
+            display: flex;
+        }
+        #footer{
+            height:3px;
+            width:100%;
+            background-color:#106656;
+            color:black;
+            margin-bottom:0px;
+            margin-left:30px;
+            margin-top:20px;
+        }
+        #h6{
+            text-align: center;
+            color:white;
+            font-size:18PX;
+            margin-top:30px;
+            margin-left:510px;
+        }
+        #h7{
+            text-align: center;
+            color:white;
+            font-size:18PX;
+            margin-top:0px;
+            margin-left:520px;
+        }   
+        #id3 img{
+            height:45px;
+            border:2px solid black; 
+            width:160px;
+            margin-top:2px;
+            cursor: pointer;
+            margin-left:630px;
+            border-radius:60px;
+            box-shadow:0px 0px 30px black;
+        }
+        #icons{
+            margin-left:550px;
+            height:50px;
+            width:300px;
+            padding-left:10px;
+            margin-top:30px;
+        }
+        #i5{
+            border:1px solid #106656;
+            font-size:27px;
+            height:47px;
+            width:48px;
+            background-color: #106656;
+            color: white;
+            text-decoration: none;
+            border-radius:4px;
+            padding-top:12px;
+            padding-left:14px;
+        }
+        #i6{
+            border:1px solid #106656;
+            font-size:27px;
+            height:45px;
+            width:50px;
+            background-color: #106656;
+            color: white;
+            text-decoration: none;
+            border-radius:4px;
+            padding-top:12px;
+            padding-left:14px;
+            margin-left:20px;
+        }
+        #i7{
+            border:1px solid #106656;
+            font-size:29px;
+            height:47px;
+            width:50px;
+            background-color: #106656;
+            color: white;
+            text-decoration: none;
+            border-radius:4px;
+            padding-top:9px;
+            padding-left:12px;
+            margin-left:20px;
+        }
+        #i8{
+            border:1px solid #106656;
+            font-size:29px;
+            height:47px;
+            width:49px;
+            background-color: #106656;
+            color: white;
+            text-decoration: none;
+            border-radius:4px;
+            padding-top:10px;
+            padding-left:12px;
+            margin-left:20px;
+        }
+       
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="navbar">
+        <h1>Portfolio.</h1>
+        <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ABOUT.html">About</a></li>
+            <li><a href="RESUME.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="location.html">Contact Us</a></li>
+        </ul>
+        </nav>
+    </div>
+    <div id="project">
+        <h2>CONTACT<h3>ME</h3></h2>
+        </div>
+    <div id="main">
+        <div id="icon1">
+        <span class="glyphicon glyphicon-map-marker"></span>
+        <div id="a1">
+        <B>Location:</B><br>
+        <p>vya tigada,mahveeer ward shahpur,<br>Sagar,M.P</p>
+        </div>
+        </div>
+        <div id="icon2">
+        <span class="glyphicon glyphicon-earphone"></span>
+        <div id="a2">
+        <b>Phone:</b><br>
+        <p>+91 8839345587<br></p>
+        </div>
+        </div>
+        <div id="icon3">
+        <span class="glyphicon glyphicon-envelope"></span>
+        <div id="a3">
+        <b>E-mail:</b><br>
+        <p>ananyajain04571@gmail.com</p> 
+        </div>
+        </div>
+        </div>
+    <div id="flex">
+    <div id="content">
+        <h4>Get In Touch.</h4>
+        <input type="name" placeholder="First Name">
+        <input type="Name" placeholder="Last Name"><br>
+        <input type="email" placeholder="Email">
+        <input type="number" placeholder="Mobile"><br>
+        <h6>Share your thoughts...</h6>
+        <textarea placeholder=""></textarea><br>
+        <button>Submit</button>
+    </div>
+    <div id="any">
+    <iframe style="border:10px solid white;box-shadow:0px 0px 10px #106656; margin-top:30px; width:660px; height:500px;" src= "https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=india+Madhya Pradesh+Sagar+shahpur+vya tigada" frameborder="0" allowfullscreen></iframe><br>
+    </div>
+    </div>
+    <div id="footer">
+    </div>
+    <div id="f1">
+        <div id="icons">
+            <a href="#" id="i5" class="fa fa-facebook"></a>
+            <a href="#" id="i6" class="fa fa-twitter"></a>
+            <a href="#" id="i7" class="fa fa-instagram"></a>
+            <a href="#" id="i8" class="fa fa-whatsapp"></a>
+        </div>
+        <h6 id="h6">contact us:+91 8839345587</h6>
+        <h6 id="h7">Copyright by ananyajain04571@gmail.com</h6>
+    </div>
+</body>
+</html>
